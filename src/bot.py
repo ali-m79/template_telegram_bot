@@ -3,4 +3,4 @@ import os
 import telebot
 
 # Initialize bot
-bot = telebot.TeleBot(os.environ["NASHENAS_BOT_TOKEN"])
+bot = telebot.TeleBot(os.environ["TELEGRAM_BOT_TOKEN"])
