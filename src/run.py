@@ -3,13 +3,16 @@ from loguru import logger
 
 from src.bot import bot
 from src.constants import keyboards
-
+from src.filters import IsAdmin
 
 class Bot:
 
     def __init__(self, telegram_bot):
 
         self.bot = telegram_bot
+
+        # add custom filters
+        self.bot.add_custom_filter(IsAdmin())
 
         # register handlers
         self.handler()
